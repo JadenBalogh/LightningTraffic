@@ -3,7 +3,6 @@ class CarHandler {
 
   CarHandler(int numCars) {
     cars = new ArrayList<Car>(numCars);
-    cars.add(new Car(2));
   }
 
   void update() {
