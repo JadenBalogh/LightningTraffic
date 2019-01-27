@@ -1,7 +1,7 @@
 # Lightning Traffic
 A Machine Learning traffic lights simulator made for nwHacks 2019.
 
-<img src = "https://imgur.com/a/6Fg74zX.png" width="826" height="407" alt = "Sample run: cars are in blue, streets are in grey and traffic lights are red or green">
+<img src = "https://i.imgur.com/8pqZSUf.png" width="826" height="407" alt = "Sample run: cars are in blue, streets are in grey and traffic lights are red or green">
 
 ## Description
 
