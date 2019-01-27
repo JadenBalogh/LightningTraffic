@@ -2,10 +2,6 @@
 Machine learning traffic lights simulator made for nwHacks 2019.
 
 ## How to Contribute
-This project allows everybody to contribute as little or as much as they want and still make a difference. It could be adding some voice lines, sound effects, a script, or sprites (images) - anything. This section goes through the steps of adding your creations to the project.
-
-> Make sure you have joined the [Open Project 2018 Team page](https://github.com/orgs/ubco-video-game-development-club/teams/open-project-2018) and the [UBCO Video Game Development Club organization](https://github.com/orgs/ubco-video-game-development-club). You have to be added by an administrator, so either send Jaden Balogh a direct message through Discord, notify an admin in the Discord focused channel for the Open Project using @Admin, or send an email to ubcovgdc@gmail.com with your GitHub username.
-
 
 Once you're setup, you can upload your files to the project. GitHub can be a bit hard to learn and understand, so we'll try to keep this process fairly straightforward:
 
