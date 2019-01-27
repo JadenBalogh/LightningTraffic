@@ -13,7 +13,7 @@ void setup() {
   //carHandler = new CarHandler(1);
   cars = new ArrayList<Car>();
   size(1200, 600);
-  frameRate(1);
+  frameRate(10);
 }
 
 void draw() {
@@ -23,12 +23,16 @@ void draw() {
     print(0);
     cars.add(new Car(0));
   }
-  
+  ArrayList<Car> flagged = new ArrayList<Car>();
   for(Car c: cars) {
+          if(c.flagged) {
+        flagged.add(c);
+      } else {
       c.move();
-  c.display();
+      c.display();
+      }
   }
   
-  
+  cars.remove(flagged);
 
 }
