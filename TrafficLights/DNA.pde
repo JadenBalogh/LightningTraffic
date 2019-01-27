@@ -1,6 +1,6 @@
 // Generic DNA: array of 30 booleans that is the pattern
 
-class DNA{
+class DNA{ 
   
   boolean[] pattern = new boolean[30]; // this is the traffic light pattern
   
@@ -10,10 +10,10 @@ class DNA{
       
       // Randomly generates pattern array
       if(random(2) >= 1){
-        pattern[i] = 1;
+        pattern[i] = true;
       }
       else{
-        pattern[i] = 0;
+        pattern[i] = false;
       }
       
     }
@@ -44,7 +44,7 @@ class DNA{
     */
     
     int rndValueForPercent = 1011; // this was 
-    DNA newDna = DNA();
+    DNA newDna = new DNA();
       
     for(int i = 0;i<pattern.length;i++){
       if(random(rndValueForPercent) <= 1){
@@ -56,7 +56,9 @@ class DNA{
         newDna.pattern[i] = pattern[i];
       }
     }
+  
+  return newDna;
     
   }
-  
+   
 }
