@@ -3,6 +3,12 @@
 class DNA{ 
   
   boolean[] pattern = new boolean[30]; // this is the traffic light pattern
+  double fitness;
+  
+  // This is a big to do. Integrate this with the rest of the program
+  void calculateFitness(){
+    
+  }
   
   DNA(){
     
