@@ -12,12 +12,17 @@ class Tile {
     this.x = x;
     this.y = y;
   }
-
+  
   void display() {
      rectMode(CENTER);
     if(isRoad) {
      fill(200); 
     }
+    
+    if(isIntersection) {
+     fill(100); 
+    }
+    
     rect(x, y, tileGridMaker.tWidth, tileGridMaker.tHeight);
     fill(255);
   }
