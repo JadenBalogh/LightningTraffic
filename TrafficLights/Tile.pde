@@ -14,12 +14,20 @@ class Tile {
     this.carInDir = new boolean[4];
     this.isGreen = new boolean[10];
   }
-
+  
   void display() {
      rectMode(CENTER);
     if(isRoad) {
-     fill(200); 
+      fill(200); 
     }
+    if (isGreen != null && frameCount < isGreen.length) {
+      fill(isGreen[frameCount] ? color(0, 255, 0) : color(255, 0, 0));
+    }
+    
+    if(isIntersection) {
+     fill(100); 
+    }
+    
     rect(x, y, tileGridMaker.tWidth, tileGridMaker.tHeight);
     fill(255);
   }
