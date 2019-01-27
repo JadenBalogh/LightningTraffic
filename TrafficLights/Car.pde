@@ -5,27 +5,33 @@ class Car {
   int x, y;
   int side;
   int type; 
-  
-  Car(int x, int y, int type) {
-    side = (int)(tileGridMaker.tWidth * 0.7);
-    this.x = x;
-    this.y = y;
-    this.type = type;
-    initPath(type);
-  }
-  
-  void initPath(int type) {
-    // move 4 steps right
+
+  Car(int type) {
     path = new ArrayList<Tile>();
-    for(int i = 0; i < 20; i++) {
-      path.add(tileGridMaker.tileGrid[y][x + i]);
+    if (type == 0) {
+      this.x = 3;
+      this.y = 7;
+      initPath(type);
+    }
+    side = (int)(tileGridMaker.tWidth * 0.7);
+    this.type = type;
+  }
+
+  void initPath(int type) {
+    if (type == 0) {
+      // JP's path 
+      for (int i = 0; i < 20; i++) {
+        path.add(tileGridMaker.tileGrid[y][x + i]);
+      }
+    } else if (type == 1) {
+      // Noah's path
     }
   }
-  
+
   boolean canMove(int direction) {
     return (!path.get(currentTile).isLight || path.get(currentTile).isGreen[frameCount % 10]) && !path.get(currentTile + 1).carInDir[direction];
   }
-  
+
   void move() {
     print(canMove(dir));
     int dx = path.get(currentTile + 1).x - path.get(currentTile).x;
@@ -41,7 +47,7 @@ class Car {
         // ADD: Destroy Car
         return;
       }
-      
+
       path.get(currentTile).carInDir[nextDir] = true;
       dir = nextDir;
     }
@@ -55,7 +61,7 @@ class Car {
     else if (j < 0) return SOUTH;
     else return WEST;
   }
-  
+
   void display() {
     rectMode(CENTER);
     fill(0, 0, 255);
