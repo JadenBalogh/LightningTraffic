@@ -11,6 +11,8 @@ class Tile {
   Tile(int x, int y) {
     this.x = x;
     this.y = y;
+    this.carInDir = new boolean[4];
+    this.isGreen = new boolean[10];
   }
   
   void display() {
