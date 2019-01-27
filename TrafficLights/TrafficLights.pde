@@ -13,15 +13,15 @@ void setup() {
   //carHandler = new CarHandler(1);
   cars = new ArrayList<Car>();
   size(1200, 600);
-  frameRate(10);
+  frameRate(50);
 }
 
 void draw() {
   tileGridMaker.displayGrid();
   //carHandler.update();
-  if(frameCount % 2 == 0) {
-    print(0);
-    cars.add(new Car(0));
+  int frequency = 1;
+  if(frameCount % frequency == 0) {
+    cars.add(new Car(frameCount % 2));
   }
   ArrayList<Car> flagged = new ArrayList<Car>();
   for(Car c: cars) {

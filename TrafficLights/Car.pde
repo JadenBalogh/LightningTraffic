@@ -31,10 +31,39 @@ class Car {
         path.add(tileGridMaker.tileGrid[19 - i][22]);
       }
       
-      for (int i = 0; i < 19; i++) {
+      for (int i = 0; i < 18; i++) {
         path.add(tileGridMaker.tileGrid[14][22 + i]);
       }
     } else if (type == 1) {
+            // Noah's path 
+      for (int i = 0; i < 6; i++) {
+        path.add(tileGridMaker.tileGrid[11][52-i]);
+      }
+      
+      for (int i = 0; i < 14; i++) {
+        path.add(tileGridMaker.tileGrid[11+i][46]);
+      }
+      
+      for (int i = 0; i < 36; i++) {
+        path.add(tileGridMaker.tileGrid[25][46-i]);
+      }
+      
+      for (int i = 0; i < 14; i++) {
+        path.add(tileGridMaker.tileGrid[24-i][39]);
+      }
+      
+      for (int i = 0; i < 34; i++) {
+        path.add(tileGridMaker.tileGrid[11][39-i]);
+      }
+      
+      for (int i = 0; i < 13; i++) {
+        path.add(tileGridMaker.tileGrid[24-i][11]);
+      }
+      
+      for (int i = 0; i < 4; i++) {
+        path.add(tileGridMaker.tileGrid[11][11-i]);
+      }
+      
       // Noah's path
     } else if (type == 2) {
       // Jaden's path

@@ -19,7 +19,7 @@ class GeneticAlgorithm{
     
     for(DNA organism : population){
       organism.calculateFitness(); // calculates absolute fitness
-      totalFitness += organism.fitness();
+      //totalFitness += organism.fitness();
     }
     
     for(DNA organism : population){
