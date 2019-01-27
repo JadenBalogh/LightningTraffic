@@ -7,6 +7,7 @@ class Tile {
   boolean[] carInDir; // cars going NESW on tile
   boolean isIntersection;
   boolean isRoad;
+  boolean noColor;
 
   Tile(int x, int y) {
     this.x = x;
@@ -18,12 +19,15 @@ class Tile {
     if(isRoad) {
       fill(200); 
     }
-    if (isGreen != null && frameCount < isGreen.length) {
-      fill(isGreen[frameCount] ? color(0, 255, 0) : color(255, 0, 0));
+    if (isGreen != null) {
+      fill(isGreen[frameCount % isGreen.length] ? color(0, 255, 0) : color(255, 0, 0));
     }
     
     if(isIntersection) {
      fill(100); 
+    }
+    if(noColor) {
+     fill(255); 
     }
     
     rect(x, y, tileGridMaker.tWidth, tileGridMaker.tHeight);
