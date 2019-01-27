@@ -3,8 +3,6 @@ Machine learning traffic lights simulator made for nwHacks 2019.
 
 ## How to Contribute
 
-Once you're setup, you can upload your files to the project. GitHub can be a bit hard to learn and understand, so we'll try to keep this process fairly straightforward:
-
 1. Go to the [Code tab](https://github.com/ubco-video-game-development-club/open-project-2018) of the Open Project repository.
 2. Click the button on the left-hand side that says "Branch: master" and type in a unique name that describes your changes (this can also just be your name) and press "Create branch: *yourname*". This creates a separate "branch" of the project on which you can add changes without fear of messing up anything in the actual project. Make sure the button now says "Branch: *yourname*" before continuing.
 3. **If you just want to add files for others to use**, click on the Assets folder then navigate to the appropriate subfolder. Once you are in the folder where you want to add your files, press Upload Files and drag your files onto the page. 
