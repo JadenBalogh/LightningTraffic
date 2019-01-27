@@ -5,16 +5,30 @@ final int WEST = 3;
 
 TileGridMaker tileGridMaker;
 CarHandler carHandler;
-Car c;
+//Car c;
+ArrayList<Car> cars;
 
 void setup() {
   tileGridMaker = new TileGridMaker(60, 30);
-  carHandler = new CarHandler(1);
+  //carHandler = new CarHandler(1);
+  cars = new ArrayList<Car>();
   size(1200, 600);
   frameRate(1);
 }
 
 void draw() {
   tileGridMaker.displayGrid();
-  carHandler.update();
+  //carHandler.update();
+  if(frameCount % 2 == 0) {
+    print(0);
+    cars.add(new Car(0));
+  }
+  
+  for(Car c: cars) {
+      c.move();
+  c.display();
+  }
+  
+  
+
 }

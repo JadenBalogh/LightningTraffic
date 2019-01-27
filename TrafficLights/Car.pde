@@ -69,6 +69,8 @@ class Car {
       path.get(currentTile).carInDir[nextDir] = true;
       dir = nextDir;
     }
+    x = path.get(currentTile ).x;
+    y = path.get(currentTile).y;
   }
 
   int getCardinalDir(int i, int j) {
