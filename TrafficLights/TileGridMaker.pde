@@ -51,6 +51,12 @@ class TileGridMaker {
     tileGrid[24][21].isIntersection = true;
     tileGrid[4][30].isIntersection = true;
     tileGrid[20][8].isIntersection = true;
+    tileGrid[5][53].isIntersection = true;
+    tileGrid[15][25].isIntersection = true;
+    tileGrid[17][38].isIntersection = true;
+    tileGrid[24][45].isIntersection = true;
+    tileGrid[12][13].isIntersection = true;
+    tileGrid[12][13].isIntersection = true;
   }
 
   void initializeLights() { // for a single intersection
