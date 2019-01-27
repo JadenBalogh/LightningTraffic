@@ -6,10 +6,14 @@ class Tile {
   boolean[] carInDir; // cars going NESW on tile
   boolean isIntersection;
   boolean isRoad;
+  boolean isLight;
+  int size;
 
-  Tile(int x, int y) {
+  Tile(int x, int y, int size) {
     this.x = x;
     this.y = y;
+    carInDir = new boolean[4];
+    this.size = size;
   }
   
   void display() {
@@ -17,15 +21,16 @@ class Tile {
     if(isRoad) {
       fill(200); 
     }
-    if (isGreen != null && frameCount < isGreen.length) {
-      fill(isGreen[frameCount] ? color(0, 255, 0) : color(255, 0, 0));
+    if (isGreen != null) {
+      fill(isGreen[frameCount % isGreen.length] ? color(0, 255, 0) : color(255, 0, 0));
     }
     
     if(isIntersection) {
      fill(100); 
     }
     
-    rect(x, y, tileGridMaker.tWidth, tileGridMaker.tHeight);
+    rect(x * size + size / 2, y * size + size / 2, tileGridMaker.tWidth, tileGridMaker.tHeight);
+    
     fill(255);
   }
 }

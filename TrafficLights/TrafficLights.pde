@@ -12,12 +12,12 @@ void setup() {
   //carHandler = new CarHandler(1);
   c = new Car(7, 3);
   size(1200, 600);
-  frameRate(1);
+  frameRate(10);
 }
 
 void draw() {
   tileGridMaker.displayGrid();
   //carHandler.update();
-  //c.move();
+  c.move();
   c.display();
 }

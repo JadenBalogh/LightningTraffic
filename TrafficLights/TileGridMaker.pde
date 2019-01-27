@@ -1,4 +1,4 @@
-class TileGridMaker { //<>// //<>//
+class TileGridMaker { //<>// //<>// //<>//
   int numTileRows;
   int numTileCols;
   Tile[][] tileGrid;
@@ -18,7 +18,8 @@ class TileGridMaker { //<>// //<>//
     tHeight = height / numTileCols;
     for (int i = 0; i < numTileCols; i++) {
       for (int j = 0; j < numTileRows; j++) {
-        tileGrid[i][j] = new Tile(tWidth / 2 + j * tWidth, tHeight / 2 + i * tHeight);
+        tileGrid[i][j] = new Tile(j, i, tWidth);
+        //tileGrid[i][j] = new Tile(tWidth / 2 + j * tWidth, tHeight / 2 + i * tHeight);
       }
     }
     initRoadsIntersectLights();
