@@ -1,7 +1,7 @@
 # Lightning Traffic
 A Machine Learning traffic lights simulator made for nwHacks 2019.
 
-<img src = "https://i.imgur.com/LSUmsVX.png" width="826" height="407" alt = "Sample run: cars are in blue, streets are in grey and traffic lights are red or green">
+<img src = "https://imgur.com/a/6Fg74zX.png" width="826" height="407" alt = "Sample run: cars are in blue, streets are in grey and traffic lights are red or green">
 
 ## Description
 
@@ -15,3 +15,10 @@ should be on and off.
 
 The project was written in Java and the GUI of the simulations is done by Processing.  
 The AI learning process is based on *Genetic Algorithms*. 
+
+## Project developers:
+
+Jaden Balogh
+Ivan Carvalho
+Noah Eibl
+Jean-Philippe Abadir
