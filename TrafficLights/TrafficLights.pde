@@ -13,7 +13,7 @@ void setup() {
   //carHandler = new CarHandler(1);
   cars = new ArrayList<Car>();
   size(1200, 600);
-  frameRate(10);
+  frameRate(1);
 }
 
 void draw() {
@@ -30,4 +30,5 @@ void draw() {
   }
   
   
+
 }
