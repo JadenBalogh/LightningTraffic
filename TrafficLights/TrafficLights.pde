@@ -1,3 +1,10 @@
-//the very first line ever ever
+TileGridMaker tileGridMaker;
 
-// JP SAYS HI
+void setup() {
+  tileGridMaker = new TileGridMaker(30, 15);
+  size(1200, 600);
+}
+
+void draw() {
+  tileGridMaker.displayGrid();
+}
