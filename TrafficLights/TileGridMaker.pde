@@ -37,6 +37,11 @@ class TileGridMaker {
   }
 
   void initializeIntersections() {
+    tileGrid[15][31].isIntersection = true;
+    tileGrid[10][20].isIntersection = true;
+    tileGrid[23][28].isIntersection = true;
+    tileGrid[16][6].isIntersection = true;
+    tileGrid[10][38].isIntersection = true;
     tileGrid[3][8].isIntersection = true;
     tileGrid[12][45].isIntersection = true;
     tileGrid[26][35].isIntersection = true;
