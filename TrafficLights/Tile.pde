@@ -12,7 +12,7 @@ class Tile {
     this.x = x;
     this.y = y;
   }
-
+  
   void display() {
      rectMode(CENTER);
     if(isRoad) {
@@ -21,6 +21,11 @@ class Tile {
     if (isGreen != null && frameCount < isGreen.length) {
       fill(isGreen[frameCount] ? color(0, 255, 0) : color(255, 0, 0));
     }
+    
+    if(isIntersection) {
+     fill(100); 
+    }
+    
     rect(x, y, tileGridMaker.tWidth, tileGridMaker.tHeight);
     fill(255);
   }
