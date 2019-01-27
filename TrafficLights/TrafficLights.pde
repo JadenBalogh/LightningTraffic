@@ -1,11 +1,18 @@
+final int NORTH = 0;
+final int EAST = 1;
+final int SOUTH = 2;
+final int WEST = 3;
 
-void settings() {
- size((int)(displayWidth * 0.9), (int)(displayHeight * 0.8)); 
-}
+TileGridMaker tileGridMaker;
+CarHandler carHandler;
 
 void setup() {
- scale((int)(displayWidth * 0.001));
- print(displayWidth);
- rectMode(CENTER);
- rect(width / 2, height / 2, 1450, 790); 
+  tileGridMaker = new TileGridMaker(30, 15);
+  carHandler = new CarHandler(1);
+  size(1200, 600);
+}
+
+void draw() {
+  tileGridMaker.displayGrid();
+  carHandler.update();
 }
