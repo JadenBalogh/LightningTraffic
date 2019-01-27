@@ -23,17 +23,22 @@ class Car {
       for (int i = 0; i < 11; i++) {
         path.add(tileGridMaker.tileGrid[y][x + i]);
       }
-      
-      for (int i = 0; i < 18; i++) {
+
+      for (int i = 0; i < 17; i++) {
         path.add(tileGridMaker.tileGrid[y + i][17]);
       }
-      
-      path.add(tileGridMaker.tileGrid[0][16]);
-      
-      for (int i = 0; i < 8; i++) {
-        //path.add(tileGridMaker.tileGrid[1][16 + i]);
+
+      for (int i = 0; i < 6; i++) {
+        path.add(tileGridMaker.tileGrid[19][17 + i]);
       }
       
+      for (int i = 0; i < 6; i++) {
+        path.add(tileGridMaker.tileGrid[19 - i][22]);
+      }
+      
+      for (int i = 0; i < 19; i++) {
+        path.add(tileGridMaker.tileGrid[14][22 + i]);
+      }
     } else if (type == 1) {
       // Noah's path
     }
