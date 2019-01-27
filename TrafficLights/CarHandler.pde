@@ -3,7 +3,7 @@ class CarHandler {
 
   CarHandler(int numCars) {
     cars = new ArrayList<Car>(numCars);
-    //cars.add(new Car());
+    cars.add(new Car());
   }
 
   void update() {
