@@ -8,8 +8,9 @@ CarHandler carHandler;
 
 void setup() {
   tileGridMaker = new TileGridMaker(30, 15);
-  carHandler = new CarHandler(1);
+  carHandler = new CarHandler(20);
   size(1200, 600);
+  frameRate(2);
 }
 
 void draw() {
