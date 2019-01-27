@@ -19,6 +19,9 @@ The AI learning process is based on *Genetic Algorithms*.
 ## Project developers:
 
 Jaden Balogh
+
 Ivan Carvalho
+
 Noah Eibl
+
 Jean-Philippe Abadir
