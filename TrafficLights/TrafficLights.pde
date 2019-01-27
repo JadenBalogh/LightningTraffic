@@ -12,6 +12,7 @@ void setup() {
   carHandler = new CarHandler(1);
   //e = new Editor();
   size(1200, 600);
+  frameRate(1);
 }
 
 void draw() {

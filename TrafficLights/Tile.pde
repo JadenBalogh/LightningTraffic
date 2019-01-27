@@ -16,7 +16,10 @@ class Tile {
   void display() {
      rectMode(CENTER);
     if(isRoad) {
-     fill(200); 
+      fill(200); 
+    }
+    if (isGreen != null && frameCount < isGreen.length) {
+      fill(isGreen[frameCount] ? color(0, 255, 0) : color(255, 0, 0));
     }
     
     if(isIntersection) {

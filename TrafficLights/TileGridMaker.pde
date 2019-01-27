@@ -109,4 +109,13 @@ class TileGridMaker {
     //tileGrid[12][13].isIntersection = true;
     //tileGrid[12][13].isIntersection = true;
   }
+  
+  void initializeLights(int x, int y) {
+    boolean[] pattern1 = { true, true, true, true, false, false, true, true, false, true };
+    boolean[] pattern2 = { false, false, false, false, true, true, false, false, true, false };
+    tileGrid[x][y+1].isGreen = pattern1;
+    tileGrid[x][y-1].isGreen = pattern1;
+    tileGrid[x+1][y].isGreen = pattern2;
+    tileGrid[x-1][y].isGreen = pattern2;
+  }
 }
