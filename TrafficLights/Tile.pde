@@ -2,18 +2,15 @@
 class Tile {
   int x;
   int y; 
-  int tWidth;
-  int tHeight;
-  boolean[] light; // preset light array of red/green over time in seconds
+  
+  boolean[] isGreen; // preset light array of red/green over time in seconds
   boolean[] carInDir; // cars going NESW on tile
   boolean isIntersection;
   boolean isRoad;
 
-  Tile(int x, int y, int tWidth, int tHeight) {
+  Tile(int x, int y) {
     this.x = x;
     this.y = y;
-    this.tWidth = tWidth;
-    this.tHeight = tHeight;
   }
 
   void display() {
@@ -21,7 +18,7 @@ class Tile {
     if(isRoad) {
      fill(200); 
     }
-    rect(x, y, tWidth, tHeight);
+    rect(x, y, tileGridMaker.tWidth, tileGridMaker.tHeight);
     fill(255);
   }
 }
