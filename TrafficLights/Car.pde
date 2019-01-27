@@ -1,4 +1,5 @@
 class Car {
+  TileGridMaker tileGridMaker;
   ArrayList<Tile> path = new ArrayList<Tile>();
   int currentTile = 0;
   int dir;
@@ -6,7 +7,8 @@ class Car {
   int side;
   boolean flagged;
 
-  Car(int type) {
+  Car(int type, TileGridMaker td) {
+    tileGridMaker = td;
     path = new ArrayList<Tile>();
     initPath(type);
     side = (int)(tileGridMaker.tWidth * 0.7);
@@ -26,15 +28,36 @@ class Car {
       for (int i = 0; i < 6; i++) {
         path.add(tileGridMaker.tileGrid[19][17 + i]);
       }
-      
+
       for (int i = 0; i < 6; i++) {
         path.add(tileGridMaker.tileGrid[19 - i][22]);
       }
-      
-      for (int i = 0; i < 19; i++) {
+
+      for (int i = 0; i < 18; i++) {
         path.add(tileGridMaker.tileGrid[14][22 + i]);
       }
     } else if (type == 1) {
+      // Noah's path 
+      for (int i = 0; i < 6; i++) {
+        path.add(tileGridMaker.tileGrid[11][52-i]);
+      }
+
+      for (int i = 0; i < 14; i++) {
+        path.add(tileGridMaker.tileGrid[11+i][46]);
+      }
+
+      for (int i = 0; i < 8; i++) {
+        path.add(tileGridMaker.tileGrid[25][46-i]);
+      }
+
+      for (int i = 0; i < 14; i++) {
+        path.add(tileGridMaker.tileGrid[24-i][39]);
+      }
+
+      for (int i = 0; i < 34; i++) {
+        path.add(tileGridMaker.tileGrid[11][39-i]);
+      }
+
       // Noah's path
     } else if (type == 2) {
       // Jaden's path
@@ -49,6 +72,7 @@ class Car {
   }
 
   void move() {
+
     int dx = path.get(currentTile + 1).x - path.get(currentTile).x;
     int dy = path.get(currentTile + 1).y - path.get(currentTile).y;
     int nextDir = getCardinalDir(dx, dy); // direction we are moving
@@ -56,7 +80,7 @@ class Car {
     if (canMove(nextDir)) {
       path.get(currentTile).carInDir[dir] = false;
       currentTile++;
-      
+
       x = path.get(currentTile).x;
       y = path.get(currentTile).y;
 

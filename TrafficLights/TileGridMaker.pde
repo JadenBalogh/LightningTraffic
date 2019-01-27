@@ -1,12 +1,15 @@
-class TileGridMaker { //<>// //<>// //<>// //<>// //<>//
+class TileGridMaker { //<>// //<>// //<>// //<>// //<>// //<>//
   int numTileRows;
   int numTileCols;
   Tile[][] tileGrid;
   //int[][] dataCity;
   int tWidth;
   int tHeight;
+  int counter = 0;
+  Set s;
 
-  TileGridMaker(int numTileRows, int numTileCols) {
+  TileGridMaker(int numTileRows, int numTileCols, Set s) {
+    this.s = s;
     this.numTileRows = numTileRows;
     this.numTileCols = numTileCols;
     initializeGrid();
@@ -18,7 +21,7 @@ class TileGridMaker { //<>// //<>// //<>// //<>// //<>//
     tHeight = height / numTileCols;
     for (int i = 0; i < numTileCols; i++) {
       for (int j = 0; j < numTileRows; j++) {
-        tileGrid[i][j] = new Tile(j, i, tWidth);
+        tileGrid[i][j] = new Tile(j, i, tWidth, this);
         //tileGrid[i][j] = new Tile(tWidth / 2 + j * tWidth, tHeight / 2 + i * tHeight);
       }
     }
@@ -88,10 +91,10 @@ class TileGridMaker { //<>// //<>// //<>// //<>// //<>//
       }
     }
   }
-  
+
   void initializeLights(int x, int y) {
-    boolean[] pattern1 = { true, false, false, false, false, false, false, false, true, true };
-    boolean[] pattern2 = { true, false, false, false, false, true, true, true, true, true };
+    boolean[] pattern1 = s.dnas[counter].pattern;
+    boolean[] pattern2 = invert(s.dnas[counter].pattern);
     if (tileGrid[x][y+1].isRoad) {
       tileGrid[x][y+1].isGreen = pattern1;
     }
@@ -104,5 +107,14 @@ class TileGridMaker { //<>// //<>// //<>// //<>// //<>//
     if (tileGrid[x-1][y].isRoad) {
       tileGrid[x-1][y].isGreen = pattern2;
     }
+    counter++;
+  }
+
+  boolean[] invert(boolean[] input) {
+    boolean[] result = new boolean[input.length];
+    for (int i = 0; i < input.length; i++) {
+      result[i] = !input[i];
+    }
+    return result;
   }
 }

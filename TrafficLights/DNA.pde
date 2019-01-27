@@ -1,49 +1,18 @@
 // Generic DNA: array of 30 booleans that is the pattern
 
-class DNA{ 
+class DNA { 
+  boolean[] pattern = new boolean[100]; // this is the traffic light pattern
   
-  boolean[] pattern = new boolean[30]; // this is the traffic light pattern
-  double fitness;
-  
-  // This is a big to do. Integrate this with the rest of the program
-  void calculateFitness(){
-    
-  }
-  
-  DNA(){
-    
-    for(int i = 0;i < pattern.length;i++){
-      
+  DNA() {
+    for(int i = 0;i < pattern.length;i++) {
       // Randomly generates pattern array
-      if(random(2) >= 1){
-        pattern[i] = true;
-      }
-      else{
-        pattern[i] = false;
-      }
-      
+      pattern[i] = random(0, 2) >= 1;
     }
     
   }
   
-  // Crosses the DNA's based on randomization
-  DNA crossover(DNA other){
-  
-    DNA child = new DNA();
+  DNA mutate() {
     
-    int splitPoint = (int)(random(pattern.length)); // we choose a random midpoint
-    
-    for(int i = 0;i<pattern.length;i++){
-      if(i > splitPoint) child.pattern[i] = pattern[i];
-      else child.pattern[i] = other.pattern[i];
-    }
-    
-    return child;
-    
-  }
-  
-  DNA mutate(){
-  
     /* This function changes at least one position of the DNA
     with a probability of roughly 3%. The Math behind it is not linear
     i.e. don't change the rndValueForPercent without doing a proper calculation

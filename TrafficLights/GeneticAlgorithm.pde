@@ -18,12 +18,12 @@ class GeneticAlgorithm{
     double totalFitness = 0;
     
     for(DNA organism : population){
-      organism.calculateFitness(); // calculates absolute fitness
-      totalFitness += organism.fitness();
+      //organism.calculateFitness(); // calculates absolute fitness
+      //totalFitness += organism.fitness();
     }
     
     for(DNA organism : population){
-      organism.fitness = organism.fitness / totalFitness; // calculates absolute fitness
+     // organism.fitness = organism.fitness / totalFitness; // calculates absolute fitness
     }
     
   }
