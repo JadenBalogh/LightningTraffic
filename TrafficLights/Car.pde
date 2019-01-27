@@ -9,8 +9,8 @@ class Car {
   Car(int type) {
     path = new ArrayList<Tile>();
     if (type == 0) {
-      this.x = 3;
-      this.y = 7;
+      this.x = 7;
+      this.y = 3;
       initPath(type);
     }
     side = (int)(tileGridMaker.tWidth * 0.7);
@@ -20,20 +20,30 @@ class Car {
   void initPath(int type) {
     if (type == 0) {
       // JP's path 
-      for (int i = 0; i < 20; i++) {
+      for (int i = 0; i < 11; i++) {
         path.add(tileGridMaker.tileGrid[y][x + i]);
       }
+      
+      for (int i = 0; i < 18; i++) {
+        path.add(tileGridMaker.tileGrid[y + i][17]);
+      }
+      
+      path.add(tileGridMaker.tileGrid[0][16]);
+      
+      for (int i = 0; i < 8; i++) {
+        //path.add(tileGridMaker.tileGrid[1][16 + i]);
+      }
+      
     } else if (type == 1) {
       // Noah's path
     }
   }
 
   boolean canMove(int direction) {
-    return (!path.get(currentTile).isLight || path.get(currentTile).isGreen[frameCount % 10]) && !path.get(currentTile + 1).carInDir[direction];
+    return (path.get(currentTile).isGreen == null || path.get(currentTile).isGreen[frameCount % 10]) && !path.get(currentTile + 1).carInDir[direction];
   }
 
   void move() {
-    print(canMove(dir));
     int dx = path.get(currentTile + 1).x - path.get(currentTile).x;
     int dy = path.get(currentTile + 1).y - path.get(currentTile).y;
     int nextDir = getCardinalDir(dx, dy); // direction we are moving
@@ -51,8 +61,9 @@ class Car {
       path.get(currentTile).carInDir[nextDir] = true;
       dir = nextDir;
     }
-    x = path.get(currentTile).x;
+    x = path.get(currentTile ).x;
     y = path.get(currentTile).y;
+    print(x + " ");
   }
 
   int getCardinalDir(int i, int j) {
