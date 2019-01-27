@@ -10,6 +10,7 @@ void setup() {
   tileGridMaker = new TileGridMaker(30, 15);
   carHandler = new CarHandler(1);
   size(1200, 600);
+  frameRate(1);
 }
 
 void draw() {

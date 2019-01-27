@@ -4,12 +4,6 @@ class Car {
   int dir;
   int x, y;
   
-  Car() {
-    path = {
-      
-    };
-  }
-
   boolean canMove(int direction) {
     return path[currentTile].isGreen[frameCount] && path[currentTile+1].carInDir[direction];
   }
