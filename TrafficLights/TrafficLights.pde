@@ -5,14 +5,19 @@ final int WEST = 3;
 
 TileGridMaker tileGridMaker;
 CarHandler carHandler;
+Car c;
 
 void setup() {
-  tileGridMaker = new TileGridMaker(30, 15);
-  carHandler = new CarHandler(1);
+  tileGridMaker = new TileGridMaker(60, 30);
+  //carHandler = new CarHandler(1);
+  c = new Car(0);
   size(1200, 600);
+  frameRate(10);
 }
 
 void draw() {
   tileGridMaker.displayGrid();
-  carHandler.update();
+  //carHandler.update();
+  c.move();
+  c.display();
 }
