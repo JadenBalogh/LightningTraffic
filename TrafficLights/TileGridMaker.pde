@@ -1,4 +1,4 @@
-class TileGridMaker { //<>// //<>// //<>//
+class TileGridMaker { //<>// //<>// //<>// //<>//
   int numTileRows;
   int numTileCols;
   Tile[][] tileGrid;
@@ -90,8 +90,8 @@ class TileGridMaker { //<>// //<>// //<>//
   }
 
   void initializeLights(int x, int y) {
-    boolean[] pattern1 = { true, true, true, true, false, false, true, true, false, true };
-    boolean[] pattern2 = { false, false, false, false, true, true, false, false, true, false };
+    boolean[] pattern1 = { false, true, false, false, true, true, true, true, true, true };
+    boolean[] pattern2 = { false, true, false, false, true, true, true, true, true, true };
     if (tileGrid[x][y+1].isRoad) {
       tileGrid[x][y+1].isGreen = pattern1;
     }

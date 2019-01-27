@@ -6,7 +6,6 @@ class Tile {
   boolean[] carInDir; // cars going NESW on tile
   boolean isIntersection;
   boolean isRoad;
-  boolean isLight;
   int size;
 
   Tile(int x, int y, int size) {
@@ -30,7 +29,6 @@ class Tile {
     }
     
     rect(x * size + size / 2, y * size + size / 2, tileGridMaker.tWidth, tileGridMaker.tHeight);
-    
     fill(255);
   }
 }

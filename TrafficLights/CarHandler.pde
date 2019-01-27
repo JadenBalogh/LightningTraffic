@@ -3,13 +3,16 @@ class CarHandler {
 
   CarHandler(int numCars) {
     cars = new ArrayList<Car>(numCars);
-    //cars.add(new Car());
   }
 
   void update() {
+    ArrayList<Car> flagged = new ArrayList<Car>();
     for (Car c : cars) {
       c.move();
+      if (c.flagged)
+        flagged.add(c);
       c.display();
     }
+    cars.removeAll(flagged);
   }
 }
