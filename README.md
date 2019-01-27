@@ -1,4 +1,4 @@
-# TrafficLights
+# Lightning Traffic
 Machine learning traffic lights simulator made for nwHacks 2019.
 
 ## How to Contribute
