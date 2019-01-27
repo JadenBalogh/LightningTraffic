@@ -68,7 +68,6 @@ class Car {
     }
     x = path.get(currentTile ).x;
     y = path.get(currentTile).y;
-    print(x + " ");
   }
 
   int getCardinalDir(int i, int j) {
