@@ -73,6 +73,7 @@ class TileGridMaker {
         int data = dataCity[i][j];
         if (data == 1) {
           tileGrid[i][j].isIntersection = true;
+          initializeLights(i, j);
         } else if (data == 2) {
           tileGrid[i][j].isRoad = true;
         } else if (data == 3) {
