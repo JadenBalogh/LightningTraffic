@@ -5,7 +5,6 @@ final int EAST = 1;
 final int SOUTH = 2;
 final int WEST = 3;
 
-
 Set[] sets;
 int activeSet = 0;
 int peakGeneration = -1;
