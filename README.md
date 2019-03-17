@@ -5,11 +5,7 @@ A Machine Learning traffic lights simulator made for nwHacks 2019.
 
 ## Description
 
-The project consists of an artificial inteligence that finds an optimal schedule  
-for the traffic lights of a city. Initially, the AI does not know the position of the traffic lights    
-nor the schedule of the cars. With time, the AI learns from the simulations and tries to minimize  
-the total time spent by the cars on traffic by assigning the times when the traffic lights  
-should be on and off.
+The project uses genetic algorithms to generate an optimal schedule for the traffic lights of a city. Initially, the AI does not know the position of the traffic lights nor the schedule of the cars. With time, the AI learns from the simulations and tries to minimize the total time spent by the cars on traffic by assigning the times when the traffic lights should be on and off.
 
 ## Implementation
 
